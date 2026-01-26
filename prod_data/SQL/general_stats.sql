@@ -28,7 +28,7 @@ FROM (SELECT CASE
 GROUP BY CONTACTED;
 -- 32% 0f the individuals that said yes were contacted previously
 
--- Does it matter how recently they were contacts? 'pdays'
+-- Does it matter how recently they were contacted for a 2nd time? 'pdays'
 SELECT
     CASE WHEN pdays IS NOT NULL AND pdays <= 10 THEN 'Y' ELSE 'N' END AS RECENT_CONTACT,
     COUNT(CASE WHEN y = 'yes' THEN 1 END) AS TOTAL_YES,
@@ -42,4 +42,7 @@ GROUP BY CASE WHEN pdays IS NOT NULL AND pdays <= 10 THEN 'Y' ELSE 'N' END
         -- Early campaigns saw much more action (number of calls)
         -- Less than half (~32%) of contacts were called for a 2nd time
         -- Success rate increases to ~65% if contacted again under 10 days
+
+-- Stakeholder feedback; build consistency in campaign efforts to draw additional analysis
+-- & if no, contact again within 10 days to see better results
 
