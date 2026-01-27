@@ -10,7 +10,7 @@ The following data is sourced from: ([source](https://archive.ics.uci.edu/datase
 - **`data_preprocessing.py`** - Base level data cleaning and preparation
 - **`raw_data/`** - Raw input data
 - **`prod_data/`** - Cleaned production-ready data
-- **`analysis/`** - Initial analysis and SQL queries
+- **`SQL/`** - Initial analysis
 - **Tableau Public** - Interactive visualizations ([Bank Data Presentation](https://public.tableau.com/views/Presentation_17695237104710/BankAnalysis?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
 
 ## Getting Started
