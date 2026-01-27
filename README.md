@@ -22,6 +22,7 @@ prod_data/
 └─ cleaned dataset
 ↓
 sqlite3 database
+└─ general_stats
 
 ## Getting Started
 
