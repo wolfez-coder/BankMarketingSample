@@ -36,7 +36,7 @@ SELECT
     ROUND(COUNT(CASE WHEN y = 'yes' THEN 1 END) * 100.0 / COUNT(*), 2) AS SUCCESS_RATE
 FROM bank_marketing
 WHERE previous > 0
-GROUP BY CASE WHEN pdays IS NOT NULL AND pdays <= 10 THEN 'Y' ELSE 'N' END
+GROUP BY CASE WHEN pdays IS NOT NULL AND pdays <= 10 THEN 'Y' ELSE 'N' END;
 -- ~65% success rate when a contacted within 10 days of the previous call
 -- At this point, it seems that a few statements can be made about the campaigns:
         -- Early campaigns saw much more action (number of calls)
@@ -46,3 +46,17 @@ GROUP BY CASE WHEN pdays IS NOT NULL AND pdays <= 10 THEN 'Y' ELSE 'N' END
 -- Stakeholder feedback; build consistency in campaign efforts to draw additional analysis
 -- & if no, contact again within 10 days to see better results
 
+SELECT
+    bank_marketing.month,
+    ROUND(COUNT(CASE WHEN y = 'yes' THEN 1 END) * 100.0 / COUNT(*), 2) AS SUCCESS_RATE
+FROM bank_marketing
+GROUP BY month
+ORDER BY 2 DESC;
+-- March has the highest success rate
+
+SELECT
+    bank_marketing.month,
+    y,
+    COUNT(*)
+FROM bank_marketing
+GROUP BY month, y;
