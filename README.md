@@ -5,24 +5,13 @@
 Data analysis pipeline for bank marketing dataset.
 
 ## Project Structure
-([Data Source](https://archive.ics.uci.edu/dataset/222/bank+marketing))
+The following data is sourced from: ([source](https://archive.ics.uci.edu/dataset/222/bank+marketing))
 
 - **`data_preprocessing.py`** - Base level data cleaning and preparation
 - **`raw_data/`** - Raw input data
 - **`prod_data/`** - Cleaned production-ready data
 - **`analysis/`** - Initial analysis and SQL queries
 - **Tableau Public** - Interactive visualizations ([Bank Data Presentation](https://public.tableau.com/views/Presentation_17695237104710/BankAnalysis?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
-
-raw_data/
-└─ bank-additional-full.csv
-↓
-data_preprocessing.py (cleaning & preparation)
-↓
-prod_data/
-└─ cleaned dataset
-↓
-sqlite3 database
-└─ general_stats
 
 ## Getting Started
 
