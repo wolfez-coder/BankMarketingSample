@@ -4,7 +4,7 @@ preproccessing stage, prior to data analysis.
 
 """
 FILE = "raw_data/bank-additional-full.csv" # raw data stored locally within repo
-OUTPUT = "prod_data/cleaned_data.csv" # you could also write this to the database in a production use case
+OUTPUT = "prod_data/Database/cleaned_data.csv" # you could also write this to the database in a production use case
 
 import pandas as pd
 import sqlite3
@@ -27,7 +27,7 @@ def output(clean_data):
         clean_data.to_csv(OUTPUT, index=False)
         print(f"Data successfully exported to {OUTPUT}")
         
-        conn = sqlite3.connect('prod_data/bank_data.db')
+        conn = sqlite3.connect('prod_data/Database/bank_data.db')
         clean_data.to_sql('bank_marketing', conn, if_exists='replace', index=False)
         conn.close()
         print("Data successfully exported to SQLite database")

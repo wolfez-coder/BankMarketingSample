@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9454d3c6-f905-4917-b545-696749070a37" name="Changes" comment="Additional analysis added">
-      <change beforePath="$PROJECT_DIR$/../prod_data/Presentation.twb" beforeDir="false" afterPath="$PROJECT_DIR$/../prod_data/Presentation.twb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../prod_data/SQL/general_stats.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../prod_data/SQL/general_stats.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../prod_data/bank_data.db" beforeDir="false" afterPath="$PROJECT_DIR$/../prod_data/bank_data.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../prod_data/cleaned_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/../data_preprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prod_data/Database/bank_data.db" beforeDir="false" afterPath="$PROJECT_DIR$/../prod_data/Database/bank_data.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +35,9 @@
     &quot;accountId&quot;: &quot;0e6d2b35-af70-41f9-b0b6-41c4f5ecb124&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
