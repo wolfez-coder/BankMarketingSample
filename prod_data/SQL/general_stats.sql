@@ -5,7 +5,7 @@ SELECT *
 FROM bank_marketing;
 
 SELECT y,
-       ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (), 2) AS PERC_RESULT
+       ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (), 2) AS PERCENTAGE_RESULT
 FROM bank_marketing
 GROUP BY y;
 -- 89% no, 11% yes
