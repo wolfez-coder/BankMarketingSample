@@ -11,7 +11,7 @@ Data analysis pipeline for bank marketing dataset.
 - **`raw_data/`** - Raw input data
 - **`prod_data/`** - Cleaned production-ready data
 - **`analysis/`** - Initial analysis and SQL queries
-- **Tableau Public** - Interactive visualizations ([Tableau](https://public.tableau.com/app/profile/zachary.wolfe4241/viz/Presentation_17695237104710/BankAnalysis?publish=yes))
+- **Tableau Public** - Interactive visualizations ([Tableau](https://public.tableau.com/views/Presentation_17695237104710/BankAnalysis?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
 
 raw_data/
 └─ bank-additional-full.csv
