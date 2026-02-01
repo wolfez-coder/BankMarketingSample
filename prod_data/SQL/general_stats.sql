@@ -48,11 +48,10 @@ FROM (
            END AS p_contact
     FROM bank_marketing
 ) sub
--- Focus on the high-performers you identified
 WHERE p_contact = '3+'
 GROUP BY p_contact, poutcome
 ORDER BY success_rate DESC;
-
+-- Where previous was 3+ and poutcome success ~75% success_rate
 
 SELECT
     CASE WHEN pdays IS NOT NULL AND pdays != 999 AND pdays <= 10 THEN 'Y' ELSE 'N' END AS RECENT_CONTACT,
