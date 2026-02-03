@@ -5,6 +5,7 @@ FROM bank_marketing;
 SELECT *
 FROM bank_marketing;
 -- All data
+-- What are key drivers? What can we gather from this dataset? If we want to calculate success rate.. what is leading to higher success?
 
 SELECT y,
        ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (), 2) AS percentage_of_total
@@ -47,7 +48,7 @@ FROM (
                WHEN previous >= 3 THEN '3+'
            END AS p_contact
     FROM bank_marketing
-) sub
+) t1
 WHERE p_contact = '3+'
 GROUP BY p_contact, poutcome
 ORDER BY success_rate DESC;
@@ -72,6 +73,7 @@ SELECT bank_marketing.campaign,
 FROM bank_marketing
 GROUP BY bank_marketing.campaign, bank_marketing.poutcome;
 -- success rate by campaign & poutcome
+-- higher success rates in earlier campaigns... less calls = better response
 
 select bank_marketing.month,
        count(*)                                                                          as total_client,
@@ -83,6 +85,7 @@ group by month
 order by success_rate desc;
 -- success rate by month
 
+-- what about duration? Does it matter how long the call took?
 SELECT
     y AS outcome,
     COUNT(*) AS total_clients,
@@ -91,6 +94,8 @@ FROM
     bank_marketing
 GROUP BY y;
 
+-- Not likely to be a key driver, if the call is longer I would assume that is just
+-- because if successful you were more engaged on the call
 SELECT duration_bucket,
        COUNT(*)                                                                AS count_of_clients,
        ROUND(SUM(CASE WHEN y = 'yes' THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS success_rate
