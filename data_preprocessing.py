@@ -19,6 +19,7 @@ def clean_data(raw_data):
     raw_data['job'] = raw_data['job'].str.replace('.','',regex=False)
     raw_data['education'] = raw_data['education'].str.replace('.',' ',regex=False)
     raw_data.columns = raw_data.columns.str.strip()
+    # raw_data['column_name'] = raw_data['column_name'].astype('str')
     return raw_data
 
 def output(clean_data):
